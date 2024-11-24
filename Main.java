@@ -30,7 +30,7 @@ public class Main {
                 if (numOfPaths > pathsTraversed) {
                     Path.choosePath(difficulty);
                 } else {
-                    Ending.showEnding(EnemyEncounter.points);
+                    Ending.showEnding();
                     break;
                 }
             }

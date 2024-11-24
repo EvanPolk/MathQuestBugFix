@@ -54,7 +54,7 @@ public class EnemyEncounter {
         if (livesCounter <= 0) {
             // Game over if no lives remain
             System.out.println("Game over, you've lost all your lives.");
-            Ending.showEnding(points); // Show ending screen
+            Ending.showEnding(); // Show ending screen
             PreGameInfo.runGame = false; // Stop the game
         } else {
             // Print remaining lives if any are left

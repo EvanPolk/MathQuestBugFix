@@ -59,6 +59,7 @@ public class PreGameInfo {
 
             if (input.hasNextInt()) {
                 difficulty = input.nextInt();
+                input.nextLine(); // Clears the "\n"
                 if (difficulty == 1 || difficulty == 2 || difficulty == 3) {
                     break;
                 } else {
@@ -66,7 +67,7 @@ public class PreGameInfo {
                 }
             } else {
                 System.out.println("Invalid input, please try again.");
-                input.next();
+                input.nextLine(); // Here you previously had input.next() and it wasn't clearing the buffer
             }
         }
     }

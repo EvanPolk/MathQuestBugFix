@@ -7,7 +7,7 @@ public class Path {
     private static final Random random = new Random(); // Random instance to determine if an encounter occurs
     
     private static void printPath(){
-        String pathFile = "C:/COMP170+271/COMP170+271/_my_Java_programs/src/MathQuest/src/Main/Monsters/path.txt";
+        String pathFile = "./Monsters/path.txt";
             Scanner output = null;
     
             System.out.println("It appears you've found another fork in the road...");
@@ -40,6 +40,7 @@ public class Path {
         while (true) { // while loop to unsure input is an integer
             if (PreGameInfo.input.hasNextInt()) { // if user enters an integer
                 int pathChoice = PreGameInfo.input.nextInt();
+                PreGameInfo.input.nextLine(); // Clearing "\n" from buffer
                 int encounter = random.nextInt(3);
 
                 if (encounter == 0 || encounter == 1) { // If there's an encounter
@@ -65,7 +66,7 @@ public class Path {
                 }
             } else {
                 System.out.println("Invalid choice. Please enter an integer beween 1 and 3, try again.");
-                PreGameInfo.input.next();
+                PreGameInfo.input.nextLine(); // Ensure it clears the entire buffer
             }
         }
     }

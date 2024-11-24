@@ -42,7 +42,7 @@ public class Ending {
     System.out.println();
     System.out.println(userScore);
     System.out.println();
-    System.out.println("Thank you for playing!!!")
+    System.out.println("Thank you for playing!!!");
     
       
     
